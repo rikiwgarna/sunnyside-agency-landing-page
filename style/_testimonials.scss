@@ -1,0 +1,42 @@
+.testimonials {
+  width: 75rem;
+  margin: 7rem auto;
+  text-align: center;
+  color: $grayishBlue;
+  h3 {
+    color: $grayishBlue;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5.31rem;
+  }
+
+  .testimonial-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .testimonial {
+      width: 350px;
+
+      .testimonial-img {
+        width: 70px;
+        border-radius: 50%;
+        margin-bottom: 67px;
+      }
+
+      .text-body {
+        margin-bottom: 4.88rem;
+        color: $veryDarkGrayishBlue;
+      }
+
+      .testimonial-name {
+        margin-bottom: 0.4rem;
+      }
+
+      .testimonial-job {
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+  }
+}

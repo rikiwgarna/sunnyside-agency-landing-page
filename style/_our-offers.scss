@@ -1,0 +1,138 @@
+.our-offers {
+  .our-offer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    article {
+      padding: 0 4.5rem;
+
+      .subheader-text {
+        font-size: 2.88rem;
+        line-height: 1.2;
+      }
+
+      .body-text {
+        margin: 3.13rem 0;
+        color: $darkGrayishBlue;
+      }
+
+      .text-link {
+        position: relative;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+
+        &:hover {
+          &::before {
+            opacity: 1;
+            transition: opacity 100ms linear;
+          }
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          left: -7%;
+          bottom: -1px;
+          height: 8px;
+          width: 114%;
+          border-radius: 5px;
+          background: $yellow;
+          opacity: 0.35;
+          z-index: -1;
+        }
+      }
+    }
+
+    img {
+      width: 675px;
+    }
+
+    &:nth-child(2) {
+      article {
+        order: 2;
+
+        .text-link {
+          position: relative;
+          font-size: 0.75rem;
+          text-transform: uppercase;
+
+          &:hover {
+            &::before {
+              opacity: 1;
+              transition: opacity 100ms linear;
+            }
+          }
+          &::before {
+            content: '';
+            position: absolute;
+            left: -7%;
+            bottom: -1px;
+            height: 8px;
+            width: 114%;
+            border-radius: 5px;
+            background: $softRed;
+            opacity: 0.35;
+            z-index: -1;
+          }
+        }
+      }
+
+      img {
+        order: 1;
+      }
+    }
+
+    &:nth-child(3) {
+      article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        text-align: center;
+
+        width: 675px;
+        height: 562.5px;
+
+        h3 {
+          font-size: 26px;
+          line-height: 1;
+          margin-bottom: 2.5rem;
+          text-transform: capitalize;
+        }
+
+        .body-text {
+          max-width: 300px;
+          margin: 0 0 3.13rem 0;
+          font-size: 14px;
+          line-height: 1.5;
+        }
+
+        &:first-child {
+          background: url('../images/desktop/image-graphic-design.jpg')
+            no-repeat center / cover;
+
+          h3 {
+            color: $darkDesaturatedCyan;
+          }
+
+          .body-text {
+            color: $darkDesaturatedCyan;
+          }
+        }
+
+        &:last-child {
+          background: url('../images/desktop/image-photography.jpg') no-repeat
+            center / cover;
+
+          h3 {
+            color: $darkBlue;
+          }
+
+          .body-text {
+            color: $darkBlue;
+          }
+        }
+      }
+    }
+  }
+}

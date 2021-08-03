@@ -1,0 +1,96 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url('../images/desktop/image-header.jpg') no-repeat center center /
+    cover;
+  min-height: 100vh;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // outline: 1px solid red;
+    // height: 10vh;
+    width: 80rem;
+    margin: 1.5rem auto;
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-transform: lowercase;
+    }
+
+    .navigation {
+      font-size: 0.88rem;
+      ul {
+        display: flex;
+        li {
+          .nav-link {
+            position: relative;
+            padding: 1em 2em;
+
+            &::before {
+              content: '';
+              position: absolute;
+              bottom: -8px;
+              left: -100%;
+              width: 0%;
+              height: 3px;
+              border-radius: 10px;
+              background: white;
+              opacity: 0;
+            }
+
+            &:hover {
+              &::before {
+                opacity: 1;
+                left: 0;
+                width: 100%;
+                transition: all 100ms linear;
+              }
+            }
+          }
+
+          &:last-child {
+            text-transform: uppercase;
+            .btn {
+              font-size: 12px;
+              padding: 1em 2em;
+              border-radius: 50px;
+              background: rgba(255, 255, 255, 1);
+              color: black;
+
+              &:hover {
+                color: white;
+                background: rgba(255, 255, 255, 0.3);
+                transition: all 100ms linear;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .headline-text {
+      font-size: 3rem;
+      line-height: 1;
+      font-weight: 900;
+      color: white;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+
+      margin: 6.25rem 0;
+    }
+
+    .arrow-down {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;900&family=Fraunces:wght@900&display=swap');
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  max-width: 1440px;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Barlow', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+.text-link,
+.testimonial-name {
+  font-family: 'Fraunces', serif;
+  color: $veryDarkDesaturatedBlue;
+}
