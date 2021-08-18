@@ -4,17 +4,35 @@
     justify-content: center;
     align-items: center;
 
+    @include breakpoint-down(small) {
+      flex-direction: column;
+    }
+
     article {
       padding: 0 4.5rem;
+
+      @include breakpoint-down(small) {
+        order: 2;
+        padding: 3.56rem 1.5rem;
+        text-align: center;
+      }
 
       .subheader-text {
         font-size: 2.88rem;
         line-height: 1.2;
+
+        @include breakpoint-down(small) {
+          font-size: 2.3rem;
+        }
       }
 
       .body-text {
         margin: 3.13rem 0;
         color: $darkGrayishBlue;
+
+        @include breakpoint-down(small) {
+          margin: 2rem 0;
+        }
       }
 
       .text-link {
@@ -45,6 +63,11 @@
 
     img {
       width: 675px;
+
+      @include breakpoint-down(small) {
+        order: 1;
+        width: 100%;
+      }
     }
 
     &:nth-child(2) {
@@ -93,11 +116,19 @@
         width: 675px;
         height: 562.5px;
 
+        @include breakpoint-down(small) {
+          padding: 0;
+        }
+        
         h3 {
           font-size: 26px;
           line-height: 1;
           margin-bottom: 2.5rem;
           text-transform: capitalize;
+
+          @include breakpoint-down(small) {
+            margin-bottom: 2rem;
+          }
         }
 
         .body-text {
@@ -105,6 +136,10 @@
           margin: 0 0 3.13rem 0;
           font-size: 14px;
           line-height: 1.5;
+
+          @include breakpoint-down(small) {
+            line-height: 1.7;
+          }
         }
 
         &:first-child {
@@ -123,6 +158,12 @@
         &:last-child {
           background: url('../images/desktop/image-photography.jpg') no-repeat
             center / cover;
+
+          @include breakpoint-down(small) {
+            background: url('../images/mobile/image-photography.jpg') no-repeat
+              center / cover;
+              width: 100%;
+          }
 
           h3 {
             color: $darkBlue;
