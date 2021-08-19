@@ -1,7 +1,16 @@
 .gallery {
   display: flex;
 
+  @include breakpoint-down(small) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   img {
     width: 25%;
+
+    @include breakpoint-down(small) {
+      width: 100%;
+    }
   }
 }

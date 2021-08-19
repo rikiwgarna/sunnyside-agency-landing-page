@@ -13,6 +13,7 @@
   }
 
   header {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -82,6 +83,58 @@
                 transition: all 100ms linear;
               }
             }
+          }
+        }
+      }
+    }
+
+    .mobile-navigation {
+      display: none;
+      position: absolute;
+      width: 100%;
+      top: 85px;
+      background-color: $white;
+      padding: 2rem 0;
+      font-size: 14px;
+      text-align: center;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: -25px;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-bottom: 25px solid $white;
+        border-left: 25px solid transparent;
+      }
+
+      &.active {
+        display: block;
+      }
+
+      .nav-link,
+      .btn {
+        color: $darkGrayishBlue;
+        font-weight: bold;
+      }
+
+      .btn {
+        color: $veryDarkDesaturatedBlue;
+      }
+
+      ul {
+        li {
+          width: 40%;
+          margin: 0 auto;
+          padding: 0.8rem 0;
+
+          &:last-child {
+            background-color: $yellow;
+            color: $darkGrayishBlue;
+            text-transform: uppercase;
+            border-radius: 50px;
+            margin-top: 1rem;
           }
         }
       }
