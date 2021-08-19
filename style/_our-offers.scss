@@ -1,15 +1,16 @@
 .our-offers {
   .our-offer {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
 
     @include breakpoint-down(small) {
-      flex-direction: column;
+      grid-template-columns: 1fr;
     }
 
     article {
-      padding: 0 4.5rem;
+      padding: 0 3.5rem;
 
       @include breakpoint-down(small) {
         order: 2;
@@ -62,8 +63,6 @@
     }
 
     img {
-      width: 675px;
-
       @include breakpoint-down(small) {
         order: 1;
         width: 100%;
@@ -73,7 +72,6 @@
     &:nth-child(2) {
       article {
         order: 2;
-
         .text-link {
           position: relative;
           font-size: 0.75rem;
@@ -113,13 +111,14 @@
         justify-content: flex-end;
         text-align: center;
 
-        width: 675px;
+        // width: 675px;
         height: 562.5px;
+        width: 100%;
 
         @include breakpoint-down(small) {
           padding: 0;
         }
-        
+
         h3 {
           font-size: 26px;
           line-height: 1;
@@ -162,7 +161,7 @@
           @include breakpoint-down(small) {
             background: url('../images/mobile/image-photography.jpg') no-repeat
               center / cover;
-              width: 100%;
+            width: 100%;
           }
 
           h3 {
